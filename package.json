@@ -1,0 +1,35 @@
+{
+  "name": "@blunck/ui",
+  "version": "1.0.0",
+  "description": "React component collection",
+  "main": "lib/index.js",
+  "scripts": {
+    "dev": "babel ./src -d ./lib -w",
+    "build": "babel ./src -d ./lib",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexblunck/ui.git"
+  },
+  "keywords": [
+    "react",
+    "ui"
+  ],
+  "author": "Alexander Blunck",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexblunck/ui/issues"
+  },
+  "homepage": "https://github.com/alexblunck/ui#readme",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1"
+  }
+}

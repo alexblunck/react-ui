@@ -1,0 +1,51 @@
+//
+// Component
+// Input
+//
+
+$input-label-height: 20px;
+$input-input-height: 30px;
+
+.Input {
+    height: $input-label-height + $input-input-height;
+}
+
+
+// Label
+
+.Input
+label {
+    display: block;
+    height: $input-label-height;
+    margin: 0;
+
+    line-height: $input-label-height;
+    color: gs(20%);
+    font-size: 16px;
+
+    transform: translateY(22px);
+    pointer-events: none;
+    transition: transform .2s, font-size .2s;
+}
+
+.Input.has-focus label,
+.Input.has-value label {
+    font-size: 13px;
+    transform: translateY(0);
+}
+
+
+// Input
+
+.Input
+input {
+    width: 100%;
+    height: $input-input-height;
+    padding-bottom: 5px;
+
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid #000;
+    font-weight: 400;
+    font-size: 16px;
+}
