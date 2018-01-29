@@ -1,0 +1,42 @@
+//
+// Styles / Utilities
+// oop
+//
+
+// Flex Center Horizontally + Vertically
+
+.f-c-xy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+// Width 100%
+
+.w-full {
+    width: 100% !important;
+}
+
+
+// Width w-{5-100}
+
+@for $i from 1 through 500 {
+    @if $i % 5 == 0 {
+        .w-#{$i} {
+            width: #{$i}px !important;
+        }
+    }
+}
+
+
+// Margin Bottom mb-{5-50}
+
+@for $i from 1 through 50 {
+    @if $i % 5 == 0 {
+        .mb-#{$i} {
+            margin-bottom: #{$i}px !important;
+        }
+    }
+}

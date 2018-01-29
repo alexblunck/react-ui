@@ -1,0 +1,28 @@
+//
+// Styles / Utilities
+// space
+//
+
+// Space Horizontal s-h-{5-100}
+
+@for $i from 1 through 100 {
+    @if $i % 5 == 0 {
+        .s-h-#{$i} {
+            display: inline-block;
+            width: 1px - 1px + $i;
+            height: 1px;
+        }
+    }
+}
+
+
+// Space Vertical s-v-{5-100}
+
+@for $i from 1 through 100 {
+    @if $i % 5 == 0 {
+        .s-v-#{$i} {
+            display: block;
+            height: 1px - 1px + $i;
+        }
+    }
+}
