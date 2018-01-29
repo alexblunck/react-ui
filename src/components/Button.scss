@@ -1,0 +1,78 @@
+//
+// Component
+// Button
+//
+
+$button-height: 35px;
+
+.Button {
+    //
+}
+
+
+// Button
+
+.Button
+button {
+    height: $button-height;
+    padding: 0 20px;
+
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    outline: 0;
+
+    color: #555;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: $button-height - 2px;
+    letter-spacing: .06em;
+
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color .15s, border-color .15s, color .15s;
+
+    &:hover {
+        border-color: #888;
+        color: #333;
+        outline: 0;
+    }
+
+    span {
+        font-weight: inherit;
+        letter-spacing: inherit;
+    }
+}
+
+
+// Flag - Width
+
+.Button.width-full
+button {
+    width: 100%;
+}
+
+
+// Flag - Colors
+
+@mixin button-color($name, $color, $outline: 0, $darktext: 0) {
+    .Button.#{$name}
+    button {
+        border-color: $color;
+
+        @if $outline == 0 {
+            background-color: $color;
+            color: white;
+            font-weight: 400;
+        }
+
+        &:hover {
+            @if $outline == 0 { background-color: darken($color, 10%); }
+            border-color: darken($color, 10%);
+        }
+    }
+}
+
+@include button-color('blue', $color-blue);
