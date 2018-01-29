@@ -33,10 +33,12 @@ export class Input extends React.Component {
             value: value,
             hasValue: !!value
         })
+
+        this.props.onChange(event)
     }
 
     render() {
-        const classes = classNames('Input', {
+        const classes = classNames('Input', this.props.className, {
             'has-focus': this.state.hasFocus,
             'has-value': this.state.hasValue
         })
@@ -53,6 +55,7 @@ export class Input extends React.Component {
 
                 <input
                     type={this.props.type}
+                    name={this.props.name}
                     value={this.state.value}
                     onFocus={this.handleFocus}
                     onBlur={this.handleBlur}
@@ -73,9 +76,12 @@ Input.defaultProps = {
 }
 
 Input.propTypes = {
+    className: PropTypes.string,
     type: PropTypes.string.isRequired,
     label: PropTypes.string,
+    name: PropTypes.string.isRequired,
     value: PropTypes.string,
     required: PropTypes.bool,
-    minLength: PropTypes.number
+    minLength: PropTypes.number,
+    onChange: PropTypes.func.isRequired
 }
