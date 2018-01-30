@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
 export class Button extends React.Component {
 
@@ -9,11 +10,11 @@ export class Button extends React.Component {
     }
 
     render() {
-        const classes = ['Button', this.props.className].join(' ')
+        const classes = classNames('Button', this.props.className)
 
         return (
             <div className={classes}>
-                <button type={this.props.type}>{this.props.children}</button>
+                <button type={this.props.type} onClick={this.props.onClick}>{this.props.children}</button>
             </div>
         )
     }
@@ -26,5 +27,6 @@ Button.defaultProps = {
 
 Button.propTypes = {
     className: PropTypes.string,
-    type: PropTypes.string
+    type: PropTypes.string,
+    onClick: PropTypes.func
 }
