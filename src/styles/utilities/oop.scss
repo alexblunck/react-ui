@@ -3,13 +3,25 @@
 // oop
 //
 
+// Display
+
+.d-ib {
+    display: inline-block;
+}
+
+
 // Flex Center Horizontally + Vertically
 
 .f-c-xy {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+}
+
+.fi-c-xy {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -28,6 +40,12 @@
             width: #{$i}px !important;
         }
     }
+}
+
+// Height 100%
+
+.h-full {
+    height: 100% !important;
 }
 
 // Margin Auto
