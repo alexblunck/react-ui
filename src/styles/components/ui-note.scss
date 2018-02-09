@@ -1,0 +1,41 @@
+//
+// Styles / Components
+// ui-note
+//
+
+.ui-note {
+    font-size: 12px;
+    font-style: italic;
+    color: gs(40%);
+    white-space: normal;
+
+    &.head { margin-bottom: 10px; }
+    &.head-m { margin-bottom: 15px; }
+    &.head-l { margin-bottom: 20px; }
+    &.head-xl { margin-bottom: 25px; }
+    &.foot { margin-top: 10px; }
+    &.foot-s { margin-top: 5px; }
+    &.foot-m { margin-top: 15px; }
+    &.foot-l { margin-top: 20px; }
+    &.foot-xl { margin-top: 25px; }
+
+    &.center {
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+
+    &.medium {
+        font-size: 14px;
+        color: gs(10%);
+    }
+
+    strong { font-weight: 400; }
+}
+
+
+// Link
+
+a.ui-note:hover {
+    color: gs(0%);
+}
