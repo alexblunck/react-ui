@@ -45,6 +45,16 @@ button {
 }
 
 
+// Flag - Size - Thin
+
+.Button.thin
+button {
+    height: 28px;
+    padding: 0 15px;
+    line-height: 26px;
+}
+
+
 // Flag - Width
 
 .Button.width-full
