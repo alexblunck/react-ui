@@ -14,7 +14,13 @@ export class Button extends React.Component {
 
         return (
             <div className={classes}>
-                <button type={this.props.type} onClick={this.props.onClick}>{this.props.children}</button>
+                <button
+                    type={this.props.type}
+                    form={this.props.form}
+                    onClick={this.props.onClick}
+                >
+                    {this.props.children}
+                </button>
             </div>
         )
     }
@@ -26,7 +32,9 @@ Button.defaultProps = {
 }
 
 Button.propTypes = {
+    children: PropTypes.node,
     className: PropTypes.string,
     type: PropTypes.string,
+    form: PropTypes.string,
     onClick: PropTypes.func
 }
