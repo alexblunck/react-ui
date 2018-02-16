@@ -3,11 +3,8 @@
 // Input
 //
 
-$input-label-height: 20px;
-$input-input-height: 30px;
-
 .Input {
-    height: $input-label-height + $input-input-height;
+    height: $ui-input-height;
 }
 
 
@@ -16,10 +13,10 @@ $input-input-height: 30px;
 .Input
 label {
     display: block;
-    height: $input-label-height;
+    height: $ui-input-label-height;
     margin: 0;
 
-    line-height: $input-label-height;
+    line-height: $ui-input-label-height;
     color: gs(40%);
     font-size: 16px;
 
@@ -40,7 +37,7 @@ label {
 .Input
 input {
     width: 100%;
-    height: $input-input-height;
+    height: $ui-input-input-height;
     padding-bottom: 5px;
 
     outline: 0;
