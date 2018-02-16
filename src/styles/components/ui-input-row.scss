@@ -1,0 +1,40 @@
+//
+// Styles / Components
+// ui-input-row
+//
+
+.ui-input-row {
+    margin-bottom: 30px;
+    font-size: 0; // Remove inline block spacing
+
+    .marginless {
+        margin-bottom: 0;
+    }
+
+    > * {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    > *:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+
+// Grid
+
+.ui-input-row {
+
+    .w-1-4 {
+        width: calc(((100% - 30px) / 4)*1);
+    }
+
+    .w-2-4 {
+        width: calc(((100% - 30px) / 4)*2);
+    }
+
+    .w-3-4 {
+        width: calc(((100% - 30px) / 4)*3);
+    }
+}
