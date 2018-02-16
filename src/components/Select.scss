@@ -1,0 +1,75 @@
+//
+// Component
+// Select
+//
+
+.Select {
+    display: inline-block;
+    height: $ui-input-height;
+    width: 200px;
+    position: relative;
+
+    border-bottom: 1px solid #000;
+
+    &:not(.disabled):hover,
+    &:not(.disabled).focused {
+        border-color: $color-blue;
+    }
+}
+
+
+// Label
+
+.Select
+label {
+    display: block;
+    width: 100%;
+    height: $ui-input-label-height;
+    margin: 0;
+
+    line-height: $ui-input-label-height;
+    color: gs(35%);
+    font-weight: 300;
+    font-size: 13px;
+}
+
+
+// Select
+
+.Select
+select {
+    display: block;
+    width: 100%;
+    height: $ui-input-input-height;
+    padding-right: 35px;
+    padding-bottom: 6px;
+    position: relative;
+    z-index: 1;
+
+    border: 0;
+    outline: 0;
+    border-radius: 0;
+    appearance: none;
+    cursor: pointer;
+
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.Select.disabled
+select {
+    cursor: default !important;
+}
+
+
+// Icon
+
+.Select
+svg {
+    display: block;
+    position: absolute;
+    bottom: 8px;
+    right: 6px;
+    pointer-events: none;
+    transition: opacity .2s;
+}
