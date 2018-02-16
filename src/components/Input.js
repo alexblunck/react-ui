@@ -18,6 +18,12 @@ export class Input extends React.Component {
         this.handleChange = this.handleChange.bind(this)
     }
 
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            value: nextProps.value || ''
+        })
+    }
+
     handleFocus() {
         this.setState({ hasFocus: true })
     }
@@ -60,6 +66,7 @@ export class Input extends React.Component {
                     onFocus={this.handleFocus}
                     onBlur={this.handleBlur}
                     onChange={this.handleChange}
+                    placeholder={this.props.placeholder}
                     required={this.props.required}
                     pattern={pattern}
                 />
@@ -79,6 +86,7 @@ Input.propTypes = {
     className: PropTypes.string,
     type: PropTypes.string.isRequired,
     label: PropTypes.string,
+    placeholder: PropTypes.string,
     name: PropTypes.string.isRequired,
     value: PropTypes.string,
     required: PropTypes.bool,
