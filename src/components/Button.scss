@@ -73,7 +73,6 @@ button {
         @if $outline == 0 {
             background-color: $color;
             color: white;
-            font-weight: 400;
         }
 
         &:hover {
