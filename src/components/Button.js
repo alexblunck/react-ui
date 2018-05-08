@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
+import { Spinner } from './Spinner'
+
 export class Button extends React.Component {
 
     constructor(props) {
@@ -10,7 +12,9 @@ export class Button extends React.Component {
     }
 
     render() {
-        const classes = classNames('Button', this.props.className)
+        const classes = classNames('Button', this.props.className, {
+            processing: this.props.processsing
+        })
 
         return (
             <div className={classes}>
@@ -21,6 +25,11 @@ export class Button extends React.Component {
                 >
                     {this.props.children}
                 </button>
+
+                {/* Spinner */}
+                <div className="spinner-container">
+                    <Spinner visible={this.props.processsing} />
+                </div>
             </div>
         )
     }
@@ -36,5 +45,6 @@ Button.propTypes = {
     className: PropTypes.string,
     type: PropTypes.string,
     form: PropTypes.string,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    processsing: PropTypes.bool
 }
