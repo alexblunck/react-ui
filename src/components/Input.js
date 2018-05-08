@@ -69,6 +69,7 @@ export class Input extends React.Component {
                     placeholder={this.props.placeholder}
                     required={this.props.required}
                     pattern={pattern}
+                    autoComplete={this.props.noAutoComplete ? 'off' : 'on'}
                 />
             </div>
         )
@@ -91,5 +92,6 @@ Input.propTypes = {
     value: PropTypes.string,
     required: PropTypes.bool,
     minLength: PropTypes.number,
-    onChange: PropTypes.func.isRequired
+    noAutoComplete: PropTypes.bool,
+    onChange: PropTypes.func.isRequired,
 }
