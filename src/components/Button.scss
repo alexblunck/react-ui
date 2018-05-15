@@ -83,11 +83,34 @@ button {
 }
 
 
+// Flag - Size - Large
+
+.Button.large
+button {
+    height: 37px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 35px;
+}
+
+
 // Flag - Width
 
-.Button.width-full
+.Button.w-full
 button {
     width: 100%;
+}
+
+
+// Flag - Pill
+
+.Button.pill
+button {
+    padding: 0 25px;
+    border-radius: $ui-button-height / 2;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: .02em;
 }
 
 
@@ -103,12 +126,33 @@ button {
             color: white;
         }
 
+        @if $darktext == 1 {
+            color: gs(20%);
+        }
+
         &:hover {
             @if $outline == 0 { background-color: darken($color, 10%); }
             border-color: darken($color, 10%);
         }
     }
 
+    // Flag - Size - Large
+    @if $darktext == 0 {
+        .Button.large.#{$name}
+        button {
+            font-weight: 600;
+        }
+    }
+
+    // Flag - Pill
+    @if $darktext == 0 {
+        .Button.pill.#{$name}
+        button {
+            font-weight: 600;
+        }
+    }
+
+    // Spinner
     @if $outline == 0 {
         .Button.#{$name}
         .Spinner {
@@ -119,3 +163,4 @@ button {
 
 @include button-color('green', $color-green);
 @include button-color('blue', $color-blue);
+@include button-color('gray', gs(87%), 0, 1);

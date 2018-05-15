@@ -17,7 +17,7 @@ export class Button extends React.Component {
         })
 
         return (
-            <div className={classes}>
+            <a className={classes} href={this.props.href}>
                 <button
                     type={this.props.type}
                     form={this.props.form}
@@ -30,7 +30,7 @@ export class Button extends React.Component {
                 <div className="spinner-container">
                     <Spinner visible={this.props.processsing} />
                 </div>
-            </div>
+            </a>
         )
     }
 
@@ -46,5 +46,6 @@ Button.propTypes = {
     type: PropTypes.string,
     form: PropTypes.string,
     onClick: PropTypes.func,
-    processsing: PropTypes.bool
+    processsing: PropTypes.bool,
+    href: PropTypes.string
 }
