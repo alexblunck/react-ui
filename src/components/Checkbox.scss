@@ -1,0 +1,96 @@
+//
+// Component
+// Checkbox
+//
+
+$ui-checkbox-size: 18px;
+
+.Checkbox {
+    display: flex;
+    position: relative;
+    font-weight: 400;
+
+    &:not(.disabled) {
+        cursor: pointer;
+    }
+
+    span {
+        margin-left: 8px;
+    }
+}
+
+
+// Input
+
+.Checkbox
+input {
+    appearance: none;
+    width: $ui-checkbox-size;
+    height: $ui-checkbox-size;
+
+    background-color: transparent;
+    border: 2px solid gs(80%);
+    border-radius: 100%;
+    transition: border-color .2s;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:checked {
+        border-color: $color-green;
+    }
+
+    &:disabled {
+        border-color: gs(60%);
+    }
+}
+
+.Checkbox:not(.disabled):hover
+input:not(:checked) {
+    border-color: gs(50%);
+}
+
+
+// Icon
+
+.Checkbox
+svg {
+    position: absolute;
+    top: -1px;
+    left: 4px;
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.Checkbox
+input:checked + svg {
+    opacity: 1;
+}
+
+
+// Flag - White
+
+.Checkbox.white {
+    color: gs(95%);
+
+    &:not(.disabled):hover
+    input:not(:checked) {
+        border-color: gs(65%);
+    }
+
+    input:disabled {
+        border-color: gs(50%);
+    }
+
+    svg * {
+        fill: #fff;
+    }
+}
+
+
+// Flag - Small Label
+
+.Checkbox.label-s {
+    font-size: 12px;
+}
