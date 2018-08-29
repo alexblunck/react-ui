@@ -1,15 +1,20 @@
-@import './styles/utilities/color';
-@import './styles/utilities/oop';
-@import './styles/utilities/space';
+// Vendor
 
-@import './styles/colors';
+@import '@blunck/sass';
+
+
+// Styles
+
 @import './styles/variables';
-@import './styles/sanitize';
-@import './styles/typography';
-@import './styles/media';
+
+
+// Style Components
 
 @import './styles/components/ui-input-row';
 @import './styles/components/ui-note';
+
+
+// Components
 
 @import './components/Button';
 @import './components/Checkbox';

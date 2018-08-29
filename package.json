@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/alexblunck/ui#readme",
   "dependencies": {
+    "@blunck/sass": "0.2.1",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0",
     "react": "^16.2.0"
