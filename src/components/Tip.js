@@ -70,6 +70,7 @@ export class Tip extends React.Component {
 }
 
 Tip.propTypes = {
+    children: PropTypes.any,
     text: PropTypes.string.isRequired,
     className: PropTypes.string
 }
