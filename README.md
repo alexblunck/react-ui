@@ -6,3 +6,8 @@ React component collection.
 
 ## Installation
 `npm i @blunck/react-ui`
+
+Import styles in your scss
+```scss
+@import '@blunck/react-ui/src/index.scss';
+```
