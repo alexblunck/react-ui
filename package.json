@@ -7,6 +7,7 @@
     "src/**/*.scss"
   ],
   "scripts": {
+    "test": "eslint src/**/*.js && sass-lint",
     "dev": "webpack --mode development --watch",
     "build": "webpack --mode production",
     "prepare": "npm run build"
