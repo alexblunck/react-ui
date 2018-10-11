@@ -12,7 +12,7 @@ module.exports = function (env, argv) {
             path: path.resolve(__dirname, 'lib'),
             filename: `blunck-react-ui.js`,
             library: 'blunckReactUi',
-            libraryTarget: 'umd'
+            libraryTarget: 'commonjs2'
         },
         devtool: devtool,
         module: {
