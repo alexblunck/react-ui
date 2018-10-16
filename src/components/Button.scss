@@ -67,8 +67,8 @@ button {
 .Button.processing {
     pointer-events: none;
 
-    button * {
-        color: transparent;
+    button {
+        color: transparent !important;
     }
 }
 
